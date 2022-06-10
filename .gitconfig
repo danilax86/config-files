@@ -1,13 +1,15 @@
 [user]
+        email = danila@danilax86.space
         name = Danila Gorelko
-        email = danila@danilax86.ru
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
 [core]
         autocrlf = input
-[alias]
-        co = checkout
-        ci = commit
-        st = status
-        br = branch
-        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-        type = cat-file -t
-        dump = cat-file -p
+        editor = nvim
