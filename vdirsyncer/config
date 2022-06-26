@@ -1,0 +1,25 @@
+[general]
+# A folder where vdirsyncer can store some metadata about each pair.
+status_path = "~/.vdirsyncer/status/"
+
+
+# CALDAV
+[pair calendar]
+a = "calendar_local"
+b = "calendar_remote"
+collections = ["from a", "from b"]
+conflict_resolution = "b wins"
+
+# Calendars also have a color property
+metadata = ["color"]
+
+[storage calendar_local]
+type = "filesystem"
+path = "~/.calendars/"
+fileext = ".ics"
+
+[storage calendar_remote]
+type = "caldav"
+url = "https://danilax86.space/baikal/dav.php/calendars"
+username = "danila"
+password = <ENTER MY PASS HERE>
