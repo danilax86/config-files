@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,6 +114,7 @@ source /mnt/driveD/Vivado/Vivado/2019.1/settings64.sh
 export LC_ALL=en_US.UTF-8
 
 alias cal="vdirsyncer sync; khal"
+alias todo="vdirsyncer sync; todo"
 
 alias isvg="rsvg-convert | icat"
 alias icat="kitty icat --align=left"
@@ -121,5 +122,5 @@ alias idot='dot -Efontsize=18 -Efontname=sans -Nfontname=sans -Tpng \
         -Gbgcolor=black -Gcolor=white -Ecolor=white -Efontcolor=white -Ncolor=white -Nfontcolor=white \
     | convert -trim -bordercolor black -border 20 -transparent black -resize '80%' - - \
     | icat'
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias xrdb='xrdb -load "$XDG_CONFIG_HOME/X11/xresources"'
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
