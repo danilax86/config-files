@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -avrP --delete-after --rsh='ssh -p 2222' ~/blog.danilax86.space/public/ danila@danilax86.space:/home/danila/projects/blog.danilax86.space/
+rsync -auvrP --delete-after --rsh='ssh -p 2222' ./blog.danilax86.space/public/ danila@danilax86.space:/home/danila/projects/blog.danilax86.space/
