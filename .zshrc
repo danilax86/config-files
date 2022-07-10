@@ -125,7 +125,7 @@ alias idot='dot -Efontsize=18 -Efontname=sans -Nfontname=sans -Tpng \
 alias xrdb='xrdb -load "$XDG_CONFIG_HOME/X11/xresources"'
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
-alias cam='mpv --no-border --ontop --video-aspect-override=4:3 \
+alias cam='mpv --no-osc --no-border --ontop --video-aspect-override=4:3 \
     --profile=low-latency --no-cache --untimed --no-demuxer-thread \
     --vd-lavc-threads=1 /dev/video0'
 
