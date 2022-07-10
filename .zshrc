@@ -123,4 +123,13 @@ alias idot='dot -Efontsize=18 -Efontname=sans -Nfontname=sans -Tpng \
     | convert -trim -bordercolor black -border 20 -transparent black -resize '80%' - - \
     | icat'
 alias xrdb='xrdb -load "$XDG_CONFIG_HOME/X11/xresources"'
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
+alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
+alias cam='mpv --no-border --ontop --video-aspect-override=4:3 \
+    --profile=low-latency --no-cache --untimed --no-demuxer-thread \
+    --vd-lavc-threads=1 /dev/video0'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
