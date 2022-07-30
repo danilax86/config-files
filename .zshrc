@@ -123,9 +123,10 @@ alias idot='dot -Efontsize=18 -Efontname=sans -Nfontname=sans -Tpng \
     | convert -trim -bordercolor black -border 20 -transparent black -resize '80%' - - \
     | icat'
 alias xrdb='xrdb -load "$XDG_CONFIG_HOME/X11/xresources"'
-alias cam='mpv --no-osc --no-border --ontop --video-aspect-override=4:3 \
-    --profile=low-latency --no-cache --untimed --no-demuxer-thread \
-    --vd-lavc-threads=1 /dev/video0'
+alias cam='v4l2-ctl --set-fmt-video=width=960,height=720; \                                                        
+           mpv --no-osc --no-border --ontop \                                                                             
+           --profile=low-latency --no-cache --untimed --no-demuxer-thread \                                               
+           --vd-lavc-threads=1 /dev/video0'   
 alias weather="curl wttr.in"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
