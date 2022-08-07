@@ -1,7 +1,7 @@
 [user]
-	email = danila@danilax86.space
-	name = Danila Gorelko
-	signingkey = 4D4B0777780701AB2E819760F672B1BE11AC2BBB
+    email = danila@danilax86.space
+    name = Danila Gorelko
+    signingkey = 4D4B0777780701AB2E819760F672B1BE11AC2BBB
 
 [alias]
   co = checkout
@@ -12,5 +12,9 @@
   type = cat-file -t
   dump = cat-file -p
 [core]
-	autocrlf = input
-	editor = nvim
+    autocrlf = input
+    editor = nvim
+
+[commit]
+    gpgsign = true
+    verbose = true
